@@ -12,7 +12,6 @@ export default function Chatbot() {
 
   const endRef = useRef();
 
-  // Stable user id
   const userId = useRef(
     localStorage.getItem("chat_user") ||
     ("user_" + Date.now())
@@ -27,7 +26,6 @@ export default function Chatbot() {
     endRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, loading]);
 
-  // Welcome message when chat opens
 useEffect(() => {
   if (open && messages.length === 0) {
     setMessages([
@@ -79,12 +77,10 @@ useEffect(() => {
 
   return (
     <>
-    {/* NAVBAR */}
     <div className="navbar">
       💬Chatbot Demo
     </div>
 
-      {/* Floating Icon */}
       <div
         className="chat-icon"
         onClick={() => setOpen(!open)}
@@ -93,7 +89,6 @@ useEffect(() => {
       </div>
 
 
-      {/* Chat Window */}
       {open && (
 
         <motion.div
@@ -149,7 +144,6 @@ useEffect(() => {
 
       )}
 
-      {/* Watermark */}
 <div className="watermark">
   Built by Harshit • 💬ChatBot Demo
 </div>

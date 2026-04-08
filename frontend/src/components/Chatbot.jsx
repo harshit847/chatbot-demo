@@ -28,7 +28,7 @@ export default function Chatbot() {
       setMessages([
         {
           sender: "bot",
-          text: "Hi 👋 I'm AmplifyEase Assistant. How can I help you today?",
+          text: "Hi 👋 I am AmplifyEase Assistant. How can I help you today?",
         },
       ]);
     }
